@@ -438,6 +438,7 @@ img {
   align-items: baseline;
   padding: 96px 16px;
   gap: 72px;
+  justify-self: center;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
@@ -452,8 +453,7 @@ img {
 .footer-social-icons {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
+
 }
 .footer-text {
   line-height: 1.5;

@@ -105,7 +105,7 @@
     padding: 96px 0;
     column-gap: 24px;
     max-width: 768px;
-    margin-left: 108px;
+    justify-content: left;
   }
   .social-icon-title {
     display: block;
@@ -125,9 +125,7 @@
   .footer-line {
     max-width: 264px;
   }
-  .footer-social-icons {
-  margin-left: 0;
-  }
+
   .logo-down {
     text-align: left;
   }
