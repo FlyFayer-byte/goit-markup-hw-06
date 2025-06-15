@@ -12,7 +12,7 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/media.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -470,23 +470,25 @@
         </div>
         <div class="footer-subscribe">
           <p class="social-icon-title">Subscribe</p>
-          <form class="footer-form">
-            <label class="footer-label">
-              <input
-                name="email"
-                class="footer-input"
-                type="email"
-                placeholder="E-mail"
-                required
-              />
-            </label>
-          </form>
-          <button class="footer-button" type="submit">
-            Subscribe
-            <svg class="footer-social-icon-button" width="24" height="24">
-              <use href="./images/icons.svg#icon-telegram-1"></use>
-            </svg>
-          </button>
+          <div>
+            <form class="footer-form">
+              <label class="footer-label">
+                <input
+                  name="email"
+                  class="footer-input"
+                  type="email"
+                  placeholder="E-mail"
+                  required
+                />
+              </label>
+            </form>
+            <button class="footer-button" type="submit">
+              Subscribe
+              <svg class="footer-social-icon-button" width="24" height="24">
+                <use href="./images/icons.svg#icon-telegram-1"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </footer>

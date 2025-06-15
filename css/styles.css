@@ -240,22 +240,17 @@ img {
   letter-spacing: 0.02em;
   color: var(--slate);
 }
-/* .benefit-items {
-  width: calc((100% - 72px) / 4);
-} */
+
 .benefit-icon {
   display: none; /* Сховати іконки на мобільних пристроях */
-}
-/* .benefit-icon {
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   height: 112px;
   background-color: #f4f4fd;
   border-radius: 4px;
   border: 1px solid #8e8f99;
   margin-bottom: 8px;
-} */
+}
 
 /*--===== Section 3 =====--*/
 /*--===== Our Team =====--*/
@@ -281,7 +276,7 @@ img {
 }
 .team-member {
   width: 100%;
-  width: 264px;
+  max-width: 264px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -455,11 +450,10 @@ img {
   /* margin-right: 120px; */
 }
 .footer-social-icons {
-display: flex;
-flex-direction: column;
-margin-left: auto;
-margin-right: auto;
-
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer-text {
   line-height: 1.5;
@@ -471,7 +465,7 @@ margin-right: auto;
 .logo-down {
   display: inline-block;
   margin-bottom: 16px;
-text-align: center;
+  text-align: center;
 }
 .logo-footer {
   color: #f4f4fd;

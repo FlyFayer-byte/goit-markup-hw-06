@@ -1,25 +1,25 @@
-
 /* Застосовується коли ширина в'юпорта більше або дорівнює 320px */
-@media (min-width: 320px) { 
-    html, body {
-      overflow-x: hidden;
-      max-width: 100%;
-    }  
+@media (min-width: 320px) {
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
   }
-  
-  /* Застосовується коли ширина в'юпорта більше або дорівнює 768px */
-  @media screen and (min-width: 768px) {
-   .container {
+}
+
+/* Застосовується коли ширина в'юпорта більше або дорівнює 768px */
+@media screen and (min-width: 768px) {
+  .container {
     max-width: 768px;
-   }
-   .header-container{
+  }
+  .header-container {
     max-width: 768px;
     margin: 0 auto;
-   }
-   .menu-button {
+  }
+  .menu-button {
     display: none;
-   }
-   .logo-up {
+  }
+  .logo-up {
     margin-left: 16px;
   }
   /* Menu Nav */
@@ -30,18 +30,86 @@
     margin-right: auto;
   }
   /*Contacts*/
-.contact-info {
- display: flex;
- margin-right: 16px;
-}
-.contacts {
-  display: flex;
-  flex-direction: column;
-}
+  .contact-info {
+    display: flex;
+    margin-right: 16px;
+  }
+  .contacts {
+    display: flex;
+    flex-direction: column;
+  }
 
-/*--===== Hero Image =====--*/
-.hero {
-  max-width: 768px;
-}
+  /*--===== Hero Image =====--*/
+  .hero {
+    max-width: 768px;
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+  .page-title {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+    margin-bottom: 36px;
+  }
 
+  /*--===== Features =====--*/
+  .benefit {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .benefit-items {
+    width: calc((100% - 72px) / 2);
+    gap: 24px;
+  }
+  .benefit-item {
+    max-width: 356px;
+    max-height: 120px;
+  }
+
+  /*--===== Our Team =====--*/
+  .our-team .container {
+    padding: auto 108px;
+  }
+  .teams {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 64px;
+  }
+  .team-member {
+    width: calc((100% - 24px) / 2);
+  }
+
+  /*--===== Our Portfolio =====--*/
+  .portfolios {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 72px;
+  }
+  .project-card {
+    width: calc((100% - 72px) / 2);
+  }
+
+  /*--===== Footer =====--*/
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 108px;
+  }
+  .social-icon-title {
+    display: block;
+    text-align: left;
+  }
+  .footer-subscribe {
+    max-width: 453px;
+    margin-right: auto;
+  }
+
+  .footer-subscribe div {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+   
+  }
 }
