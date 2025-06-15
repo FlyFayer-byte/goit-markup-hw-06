@@ -706,33 +706,3 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
 }
-
-/* Застосовується коли ширина в'юпорта більше або дорівнює 320px */
-@media (min-width: 320px) { 
-  html, body {
-    overflow-x: hidden;
-    max-width: 100%;
-  }  
-}
-
-/* Застосовується коли ширина в'юпорта менше або дорівнює 600px */
-@media (max-width: 320px) {
-  body {
-    background-color: green;
-  }
-}
-
-/* Застосовується коли ширина в'юпорта більше або дорівнює 800px */
-@media (min-width: 768px) {
-  body {
-    background-color: orange;
-  }
-}
-
-/* Застосовується коли ширина в'юпорта більше або дорівнює 1440px */
-@media (min-width: 1158px) {
-  body {
-    background-color: red;
-  }
-}
-
