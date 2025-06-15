@@ -53,14 +53,18 @@
   .benefit {
     flex-direction: row;
     flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
   }
   .benefit-items {
-    width: calc((100% - 72px) / 2);
-    gap: 24px;
+    width: calc((100% - 24px) / 2);
   }
   .benefit-item {
-    max-width: 356px;
+    
     max-height: 120px;
+  }
+  .benefit-title {
+    text-align: left;
   }
 
   /*--===== Our Team =====--*/
