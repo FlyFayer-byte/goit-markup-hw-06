@@ -7,24 +7,41 @@
     }  
   }
   
-  /* Застосовується коли ширина в'юпорта менше або дорівнює 600px */
-  @media (max-width: 320px) {  
- 
-    /*--===== HEADER =====--*/
+  /* Застосовується коли ширина в'юпорта більше або дорівнює 768px */
+  @media screen and (min-width: 768px) {
+   .container {
+    max-width: 768px;
+   }
+   .header-container{
+    max-width: 768px;
+    margin: 0 auto;
+   }
+   .menu-button {
+    display: none;
+   }
+   .logo-up {
+    margin-left: 16px;
+  }
+  /* Menu Nav */
+  .menu {
+    display: flex;
+    gap: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*Contacts*/
+.contact-info {
+ display: flex;
+ margin-right: 16px;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
 
-  }
-  
-  /* Застосовується коли ширина в'юпорта більше або дорівнює 800px */
-  @media (min-width: 768px) {
-    body {
-      background-color: orange;
-    }
-  }
-  
-  /* Застосовується коли ширина в'юпорта більше або дорівнює 1440px */
-  @media (min-width: 1158px) {
-    body {
-      background-color: red;
-    }
-  }
-  
+/*--===== Hero Image =====--*/
+.hero {
+  max-width: 768px;
+}
+
+}
