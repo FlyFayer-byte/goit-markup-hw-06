@@ -40,13 +40,15 @@ a {
 img {
   display: block;
 }
+
+/*===== CONTAINER =====*/
 /* Визначаємо ширину та падінги для контейнера */
 .container {
   max-width: 320px;
   width: 100%;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 /*--===== Top Line =====--*/
