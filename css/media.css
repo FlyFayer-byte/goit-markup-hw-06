@@ -113,7 +113,7 @@
   }
   .footer-subscribe {
     max-width: 453px;
-    margin-right: auto;
+    margin-left: 108px;
   }
 
   .footer-subscribe div {
@@ -124,6 +124,7 @@
   }
   .footer-line {
     max-width: 264px;
+    margin-left: 108px;
   }
 
   .logo-down {
