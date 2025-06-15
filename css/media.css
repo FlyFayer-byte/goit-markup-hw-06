@@ -19,9 +19,6 @@
   .menu-button {
     display: none;
   }
-  .logo-up {
-    margin-left: 16px;
-  }
   /* Menu Nav */
   .menu {
     display: flex;
@@ -75,20 +72,26 @@
   flex-wrap: wrap;
   gap: 24px;
   row-gap: 64px;
+  justify-content: center;
   }
   .team-member {
-    width: calc((100% - 24px) / 2);
+    width: calc((100% - 64px) / 2);
+    margin: 0;
+    
   }
-
+.team-member img {
+  width: 264px;
+}
   /*--===== Our Portfolio =====--*/
   .portfolios {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
     row-gap: 72px;
+    justify-content: center;
   }
   .project-card {
-    width: calc((100% - 72px) / 2);
+    width: calc((100% - 24px) / 2);
   }
 
   /*--===== Footer =====--*/
@@ -96,6 +99,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-left: 108px;
+    padding: 96px 0;
+    column-gap: 24px;
   }
   .social-icon-title {
     display: block;
@@ -111,5 +116,14 @@
     flex-direction: row;
     gap: 24px;
    
+  }
+  .footer-line {
+    max-width: 264px;
+  }
+  .footer-social-icons {
+  margin-left: 0;
+  }
+  .logo-down {
+    text-align: left;
   }
 }
