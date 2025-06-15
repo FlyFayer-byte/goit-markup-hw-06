@@ -102,9 +102,9 @@
   .footer-container {
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 108px;
     padding: 96px 0;
     column-gap: 24px;
+    max-width: 768px;
   }
   .social-icon-title {
     display: block;
