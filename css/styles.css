@@ -94,7 +94,6 @@ img {
 } */
 /* Menu Nav */
 .menu {
-  display: none;
   /* display: flex;
   gap: 40px; */
 }
@@ -131,7 +130,6 @@ img {
 }
 /*Contacts*/
 .contact-info {
-  display: none;
   font-style: normal;
   margin-left: auto;
 }
@@ -208,7 +206,6 @@ img {
 }
 
 /*--===== Features =====--*/
-
 .features {
   padding: 96px 0;
 }
