@@ -438,10 +438,8 @@ img {
 /*--===== Footer =====--*/
 .footer {
   display: flex;
-  max-width: 320px;
   width: 100%;
   background-color: #2e2f42;
-  justify-self: center;
 }
 .footer-container {
   display: flex;
@@ -450,6 +448,8 @@ img {
   padding: 96px 16px;
   gap: 72px;
   justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer-line {
   display: flex;
