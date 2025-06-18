@@ -1,0 +1,708 @@
+:root {
+  --iris: #4d5ae5;
+  --ocean: #404bbf;
+  --navy-blue: #2e2f42;
+  --light-slate: #8e8f99;
+  --cloud: #f4f4fd;
+  --navy-blue-modal: rgba(46, 47, 66, 0.4);
+  --white: #fff;
+  --font-family: "Roboto", sans-serif;
+}
+/*----------Стилі для body----------*/
+body {
+  font-family: "Roboto", sans-serif;
+  color: #434455;
+  background-color: #fff;
+  font-size: 16px;
+}
+/* Обнулюємо дефолтні маржини від браузера для заголовків та параграфів тексту */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+/* Обнулюємо дефолтні маржини та лівий падінг для списків */
+ul {
+  margin: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+/* Скидаємо дефолтне підкреслення для посилань */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* Зробимо зображення блочними елементами */
+img {
+  display: block;
+}
+/* Визначаємо ширину та падінги для контейнера */
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*----------Header----------*/
+.header {
+  box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08), 0 1px 1px rgba(46, 47, 66, 0.16),
+    0 1px 6px rgba(46, 47, 66, 0.08);
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  align-items: center; /* Центруємо контент по вертикалі */
+}
+/* Logo */
+.logo,
+.logo-down {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
+}
+.logo-studio {
+  color: #2e2f42;
+}
+.logo-up {
+  margin-right: 76px;
+}
+/* Menu Nav */
+.menu {
+  display: flex;
+  gap: 40px;
+}
+.nav-link {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: block;
+}
+/* Застосувати стиль до першого <li> і його .nav-link */
+.menu li:first-child .nav-link {
+  position: relative;
+  color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація зміни кольору */
+}
+.menu li:first-child .nav-link::after {
+  content: ""; /* Порожній контент для псевдоелемента */
+  width: 100%; /* Ширина лінії під першим пунктом меню */
+  position: absolute; /* Позиціюємо лінію під першим пунктом меню */
+  left: 0; /* Відступ від лівого краю */
+  bottom: -1px; /* Відступ від нижнього краю */
+  height: 4px; /* Висота лінії під першим пунктом меню */
+  background-color: #404bbf; /* Колір лінії під першим пунктом меню */
+  border-radius: 2px; /* Закруглення кутів лінії */
+}
+.nav-link:hover {
+  color: #404bbf;
+}
+.nav-link:focus {
+  color: #404bbf;
+}
+/*Contacts*/
+.contact-info {
+  font-style: normal;
+  margin-left: auto;
+}
+.contacts {
+  display: flex;
+  gap: 40px;
+}
+.contact-link {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-link:hover {
+  color: #404bbf;
+}
+.contact-link:focus {
+  color: #404bbf;
+}
+/*Top line bg*/
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+/*----------Hero Image----------*/
+.hero {
+  background-color: #2e2f42;
+  padding: 188px 0;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  max-width: 1440px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #ffffff;
+  max-width: 496px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
+}
+.button {
+  background: #4d5ae5;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button:hover {
+  background-color: #404bbf;
+  font-weight: 600;
+}
+.button:focus {
+  background: #404bbf;
+}
+/*----------Features----------*/
+.features {
+  padding: 120px 0;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.benefit {
+  display: flex;
+  gap: 24px;
+}
+.benefit-title {
+  margin-bottom: 8px;
+}
+.benefit-items {
+  width: calc((100% - 72px) / 4);
+}
+.benefit-icon {
+  display: flex; /* використовуємо flexbox для вирівнювання */
+  align-items: center; /* вирівнюємо іконки по вертикалі */
+  justify-content: center; /* вирівнюємо іконки по горизонталі */
+  height: 112px;
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  margin-bottom: 8px;
+}
+/*----------Section 3----------*/
+/*----------Our Team----------*/
+.our-team {
+  background-color: #f4f4fd;
+  padding: 120px 0;
+}
+.team-title {
+  margin-bottom: 72px;
+}
+.teams {
+  display: flex;
+  gap: 24px;
+}
+.team-member {
+  text-align: center;
+  background-color: #ffffff;
+  width: calc((100% - 72px) / 4);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); /* тінь */
+  border-radius: 0 0 4px 4px; /* закруглення кутів */
+}
+.personal-data {
+  padding: 32px 0;
+}
+.member-name {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.member-position {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  width: 40px;
+  height: 40px;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+  background-color: var(--iris);
+  border-radius: 50%;
+  display: flex; /* використовуємо flexbox для вирівнювання */
+  align-items: center; /* вирівнюємо іконки по вертикалі */
+  justify-content: center; /* вирівнюємо іконки по горизонталі */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація зміни кольору */
+}
+.icon:hover,
+.icon:focus {
+  background-color: #404bbf; /* змінюємо колір при наведенні */
+}
+.style-social-icon {
+  fill: #f4f4fd; /* колір іконки */
+}
+/*----------Our Portfolio----------*/
+.portfolio {
+  padding: 120px 0;
+}
+.portfolio-title {
+  margin-bottom: 72px;
+}
+.portfolios {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+.project-card {
+  width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project-card:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); /* тінь */
+}
+.project-info {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+.portfolio-name {
+  margin-bottom: 8px;
+}
+/*-----*/
+.team-title,
+.portfolio-title {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+}
+
+.benefit-title,
+.member-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+.benefit-text,
+.member-position {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+.portfolio-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
+.portfolio-category {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+.project-image {
+  position: relative; /* Відносне позиціонування для контейнера зображення */
+  overflow: hidden; /* Перекриваємо частину зображення */
+}
+.project-description {
+  position: absolute; /* Абсолютне позиціонування для опису */
+  top: 0; /* Вирівнюємо по верхньому краю */
+  font-size: 16px; /* Розмір шрифту */
+  line-height: 1.5; /* Висота рядка */
+  letter-spacing: 0.02em; /* Відстань між літерами */
+  color: var(--cloud); /* Колір тексту */
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  height: 100%; /* Висота опису дорівнює висоті зображення */
+  width: 100%; /* Ширина опису дорівнює ширині зображення */
+  transform: translateY(
+    100%
+  ); /* Початкове положення опису поза межами видимості */
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація переміщення */
+}
+.project-card:hover .project-description {
+  transform: translatey(0);
+}
+/*----------Footer----------*/
+.footer {
+  display: flex;
+  background-color: #2e2f42;
+  padding: 100px 0;
+}
+.footer .container {
+  display: flex;
+  align-items: baseline;
+}
+.footer-line {
+  flex-direction: column; /* Вирівнюємо елементи вертикально */
+  width: 100%;
+  max-width: 264px;
+  margin-right: 120px;
+}
+.footer-text {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  max-width: 264px;
+}
+.logo-down {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.logo-footer {
+  color: #f4f4fd;
+}
+.social-icon-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.footer-social-icon {
+  display: flex;
+  gap: 16px;
+}
+.footer-icon-elements {
+  width: 40px;
+  height: 40px;
+}
+.footer-icon-element {
+  width: 100%;
+  height: 100%;
+  background-color: var(--iris);
+  border-radius: 50%;
+  display: flex; /* використовуємо flexbox для вирівнювання */
+  align-items: center; /* вирівнюємо іконки по вертикалі */
+  justify-content: center; /* вирівнюємо іконки по горизонталі */
+}
+.footer-icon-element:hover,
+.footer-icon-element:focus {
+  background-color: #31d0aa; /* змінюємо колір при наведенні */
+}
+.footer-social-icon {
+  fill: var(--cloud); /* колір іконки */
+}
+.footer-icon-element {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація зміни кольору */
+}
+
+/*Footer > Subscribe*/
+.footer-subscribe {
+  /* Вирівнюємо елементи по горизонталі (div) */
+  min-width: 453px;
+  margin-left: 80px;
+}
+.modal-form {
+  /* Вирівнюємо елементи по горизонталі (form) */
+  display: flex; /* Вирівнюємо елементи по горизонталі (form) */
+}
+.footer-form {
+  display: flex;
+  gap: 24px;
+}
+.footer-input {
+  /*Box Model*/
+  border: 1px solid var(--white);
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  /*Styles*/
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: transparent; /* Прозорий фон */
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  padding-left: 16px;
+}
+.footer-input::placeholder {
+  color: var(--white); /* Колір тексту підказки */
+}
+.footer-button {
+  display: flex;
+  border-radius: 4px;
+  padding: 8px 24px;
+  min-width: 165px;
+  height: 40px;
+  background: var(--iris);
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  border: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.footer-social-icon-button {
+  margin-left: 16px;
+  fill: var(--white);
+}
+
+/*Modal window*/
+.modal-overlay {
+  /* Фон модального вікна (div) */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--navy-blue-modal);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація появи */
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Початковий стан - невидимий */
+  pointer-events: none; /*Забороняємо взаємодію з елементами поза модальним вікном */
+  visibility: hidden; /* Забороняємо видимість поза модальним вікном */
+}
+
+.is-open {
+  opacity: 1; /* Змінюємо на видимий стан */
+  pointer-events: auto; /* Дозволяємо взаємодію з елементами модального вікна */
+  visibility: visible; /* Дозволяємо видимість модального вікна */
+}
+
+/* Контейнер модального вікна (form) */
+.modal-window {
+  position: absolute; /* Абсолютне позиціонування для контейнера модального вікна */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Центруємо модальне вікно */
+  width: 408px;
+  min-height: 584px;
+  background-color: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px 24px;
+}
+
+/* Кнопка закриття модального вікна */
+.modal-close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e9fc; /* Колір фону кнопки */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Колір рамки кнопки */
+  padding: 0; /* Відсутні внутрішні відступи */
+  cursor: pointer; /* Курсор у вигляді руки при наведенні */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація зміни кольору */
+  z-index: 1000; /* Забезпечуємо, що кнопка завжди поверх інших елементів */
+  content: ""; /* Порожній контент для псевдоелемента */
+}
+.modal-close-button:hover,
+.modal-close-button:focus {
+  background-color: #404bbf; /* Колір фону кнопки при наведенні */
+  border: none; /* Колір рамки кнопки при наведенні */
+}
+.modal-close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація зміни кольору іконки */
+}
+.modal-close-button:hover .modal-close-icon,
+.modal-close-button:focus .modal-close-icon {
+  fill: #ffffff; /* Колір іконки при наведенні */
+}
+.modal-header {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
+  margin-bottom: 16px;
+}
+/*  */
+.modal-form {
+  margin-bottom: 8px; /* Відступ знизу для форми */
+  display: block;
+}
+
+.modal-form-labels {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal-form-inputs {
+  position: relative; /* Відносне позиціонування для контейнера з полем вводу */
+}
+.modal-form-input {
+  width: 100%; /* Ширина поля вводу */
+  height: 40px; /* Висота поля вводу */
+  border: 1px solid rgba(46, 47, 66, 0.4); /* Колір рамки */
+  border-radius: 4px; /* Закруглення кутів */
+  background-color: transparent; /* Прозорий фон */
+  padding-left: 38px; /* Внутрішній відступ зліва */
+  outline: transparent; /* Без обведення при фокусі */
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація зміни кольору рамки */
+}
+.modal-form-input:focus {
+  border-color: var(--iris); /* Колір рамки при фокусі */
+}
+.modal-form-input:focus ~ .modal-input-icons {
+  fill: var(--iris); /* Колір іконки при фокусі */
+}
+
+.modal-input-icons {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%); /* Центруємо іконку по вертикалі */
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація зміни кольору іконки */
+}
+.modal-form-comment {
+  margin-bottom: 16px;
+}
+.modal-form-textarea {
+  border: 1px solid var(--navy-blue-modal);
+  border-radius: 4px;
+  width: 360px;
+  height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent; /* Без обведення при фокусі */
+  resize: none; /* Забороняємо зміну розміру текстової області */
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-textarea:focus {
+  border-color: var(--iris); /* Колір рамки при фокусі */
+}
+.modal-form-checkbox {
+  margin-bottom: 24px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* Забороняємо перенос рядків */
+}
+.modal-form-checkbox-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate);
+}
+.link {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center; /* Вирівнюємо іконку по вертикалі */
+  justify-content: center; /* Вирівнюємо іконку по горизонталі */
+  fill: transparent;
+  margin-right: 8px;
+}
+.visually-hidden:checked + .modal-form-checkbox-label .link {
+  background-color: var(--ocean); /* Колір фону при виборі */
+  border: none; /* Без рамки при виборі */
+  fill: var(--cloud);
+}
+.checkbox-link {
+  color: var(--iris);
+}
+.modal-submit-button {
+  display: block;
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 169px;
+  height: 56px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: var(--iris);
+  cursor: pointer;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
+}
