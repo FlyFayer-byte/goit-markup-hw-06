@@ -783,4 +783,7 @@ address {
     font-weight: 400;
     font-size: 16px;
   }
+  .portfolios {
+    row-gap: 40px;
+  }
 }
