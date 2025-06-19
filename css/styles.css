@@ -23,12 +23,17 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+button {
+  cursor: pointer; /* Змінюємо курсор на вказівник для кнопок */
 }
 /* Обнулюємо дефолтні маржини та лівий падінг для списків */
 ul {
-  margin: 0;
   list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
 }
 /* Скидаємо дефолтне підкреслення для посилань */
@@ -40,12 +45,34 @@ a {
 img {
   display: block;
 }
+address {
+  font-style: normal; /* Скидаємо курсив для адреси */
+}
+/* Візуально приховуємо елементи, але залишаємо їх доступними для читачів екрану */
+/* Це корисно для елементів, які не повинні бути видимими,
+   але все ще важливі для доступності, наприклад, для навігації або форм */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/*----------Контейнер----------*/
 /* Визначаємо ширину та падінги для контейнера */
 .container {
-  width: 1158px;
+  max-width: 320px;
+  width: 100%;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  border: 1px solid red; /* Додаємо рамку для контейнера */
 }
 
 /*----------Header----------*/
@@ -195,18 +222,7 @@ img {
 .features {
   padding: 120px 0;
 }
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+
 .benefit {
   display: flex;
   gap: 24px;
