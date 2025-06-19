@@ -1,0 +1,10 @@
+.benefit-icon {
+  display: flex; /*використовуємо flexbox для вирівнювання*/
+  align-items: center; /*вирівнюємо іконки по вертикалі*/
+  justify-content: center; /*вирівнюємо іконки по горизонталі*/
+  height: 112px;
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  margin-bottom: 8px;
+}
