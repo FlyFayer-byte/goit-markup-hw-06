@@ -796,7 +796,7 @@ address {
     max-width: 360px; /* Максимальна ширина картки проекту */
   }
   .our-team {
-    padding: 0;
+    padding: 120px 156px;
   }
   .team {
     gap: 24px;
