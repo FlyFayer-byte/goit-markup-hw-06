@@ -167,13 +167,13 @@ address {
 /*----------Hero Image----------*/
 .hero {
   background-color: #2e2f42;
-  padding: 188px 0;
+  padding: 72px 52px;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
-  max-width: 1440px;
+    url(../images/Dark-bg-mobile.jpg);
+  max-width: 320px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -182,15 +182,13 @@ address {
 }
 .page-title {
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #ffffff;
-  max-width: 496px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 48px;
+  color: var(--white);
+  max-width: 216px;
+  margin-bottom: 72px;
 }
 .button {
   background: #4d5ae5;
@@ -224,6 +222,7 @@ address {
   display: flex;
   flex-wrap: wrap; /* Дозволяємо елементам переноситися на новий рядок */
   gap: 72px;
+  margin: 0 16px;
 }
 .benefit-title {
   margin-bottom: 8px;
@@ -247,7 +246,7 @@ address {
   display: flex;
   flex-wrap: wrap; /* Дозволяємо елементам переноситися на новий рядок */
   gap: 72px;
-  justify-content: center;
+
 }
 .team-member {
   text-align: center;
@@ -257,6 +256,8 @@ address {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); /* тінь */
   border-radius: 0 0 4px 4px; /* закруглення кутів */
+  margin-left: auto;
+  margin-right: auto;
 }
 .personal-data {
   padding: 32px 0;
@@ -309,6 +310,8 @@ address {
   row-gap: 48px;
 }
 .project-card {
+  margin-left: auto;
+  margin-right: auto;
   /* width: calc((100% - 48px) / 3); */
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -726,16 +729,13 @@ address {
     padding-left: 16px;
     padding-right: 16px;
   }
-  
+
   .benefit {
     row-gap: 72px; /* Відстань між рядками */
     column-gap: 24px; /* Відстань між стовпцями */
   }
   .benefit-items {
     width: calc((100% - 24px) / 2); /* Дві колонки на планшетах */
-  }
-  .our-team {
-    padding: 96px 108px;
   }
   .teams {
     row-gap: 64px; /* Відстань між рядками */
@@ -756,9 +756,6 @@ address {
 }
 
 @media screen and (min-width: 1158px) {
-  .features {
-    padding: 120px 156px;
-  }
   .container {
     max-width: 1158px;
     padding: 0;
@@ -796,7 +793,7 @@ address {
     max-width: 360px; /* Максимальна ширина картки проекту */
   }
   .our-team {
-    padding: 120px 156px;
+    padding: 120px 0;
   }
   .team {
     gap: 24px;
