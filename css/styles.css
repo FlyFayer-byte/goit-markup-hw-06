@@ -229,7 +229,7 @@ address {
   margin-bottom: 8px;
 }
 .benefit-items {
-width: 100%;
+  width: 100%;
 }
 .benefit-icon {
   display: none; /* Сховати іконки на мобільних пристроях */
@@ -755,7 +755,6 @@ width: 100%;
   }
 }
 
-
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
@@ -769,5 +768,19 @@ width: 100%;
     border-radius: 4px;
     border: 1px solid #8e8f99;
     margin-bottom: 8px;
+  }
+  .benefit-items,
+  .team-member {
+    width: calc((100% - 72px) / 4); /* Чотири колонки на десктопах */
+  }
+  .benefit-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: left;
+  }
+  .benefit-text {
+    font-weight: 400;
+    font-size: 16px;
   }
 }
