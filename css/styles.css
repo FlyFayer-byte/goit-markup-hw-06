@@ -224,7 +224,7 @@ address {
   display: flex;
   flex-wrap: wrap; /* Дозволяємо елементам переноситися на новий рядок */
   gap: 72px;
-  margin: 0 16px;
+  padding: 0;
 }
 .benefit-title {
   margin-bottom: 8px;
@@ -347,7 +347,6 @@ address {
 .benefit-text {
   font-family: var(--font-family);
   font-weight: 500;
-  /* font-size: 16px; */
   line-height: 150%;
   letter-spacing: 0.02em;
   color: var(--slate);
