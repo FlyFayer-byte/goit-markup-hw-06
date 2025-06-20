@@ -790,7 +790,7 @@ address {
   gap: 40px; /* Відстань між елементами */
 }
 .mob-nav {
-  max-width: 200px;
+  max-width: 151px;
 }
 .mob-nav .menu {
   display: flex; /* Відображаємо меню на мобільних пристроях */
