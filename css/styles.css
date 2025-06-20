@@ -798,10 +798,11 @@ address {
   gap: 40px; /* Відстань між елементами */
   margin-left: unset;
 }
-.mob-menu .menu li:first-child .nav-link {
+.mob-menu .menu li:first-child .menu-nav-link {
   position: unset;
+  color: var(--iris);
 }
-.mob-menu .menu .nav-link {
+.mob-menu .menu .menu-nav-link {
   font-weight: 700;
   font-size: 36px;
   line-height: 111%;
