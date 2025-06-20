@@ -81,7 +81,7 @@ address {
 }
 .header-container {
   display: flex;
-  align-items: center;
+  padding: 16px; /* Внутрішні відступи контейнера */
 }
 .nav {
   display: flex;
@@ -101,12 +101,11 @@ address {
 .logo-studio {
   color: #2e2f42;
 }
-.logo-up {
-  margin-right: 76px;
-}
+
 /* Menu Nav */
 .menu {
-  display: flex;
+  /* display: flex; */
+  display: none;
   gap: 40px;
 }
 .nav-link {
@@ -142,6 +141,7 @@ address {
 }
 /*Contacts*/
 .contact-info {
+  display: none;
   font-style: normal;
   margin-left: auto;
 }
@@ -160,6 +160,12 @@ address {
 }
 .contact-link:focus {
   color: #404bbf;
+}
+
+.menu-open-button {
+  margin-left: auto;
+  border: none;
+  background-color: transparent; /* Прозорий фон для кнопки */
 }
 /*Top line bg*/
 .header {
@@ -258,7 +264,6 @@ address {
   flex-wrap: wrap; /* Дозволяємо елементам переноситися на новий рядок */
   gap: 72px;
   justify-content: center;
-
 }
 .team-member {
   text-align: center;
@@ -411,21 +416,25 @@ address {
 .project-card:hover .project-description {
   transform: translatey(0);
 }
-/*----------Footer----------*/
+/*--===== Footer =====--*/
 .footer {
   display: flex;
   background-color: #2e2f42;
-  padding: 100px 0;
+  padding: 0;
 }
 .footer .container {
   display: flex;
+  flex-direction: column;
   align-items: baseline;
+  gap: 72px; /* Відстань між елементами */
+  margin: 96px auto; /* Відступи зліва та справа */
+  padding: 0 16px;
 }
 .footer-line {
+  display: flex;
   flex-direction: column; /* Вирівнюємо елементи вертикально */
   width: 100%;
   max-width: 264px;
-  margin-right: 120px;
 }
 .footer-text {
   line-height: 1.5;
@@ -436,21 +445,24 @@ address {
 .logo-down {
   display: inline-block;
   margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .logo-footer {
   color: #f4f4fd;
 }
 .social-icon-title {
   font-weight: 500;
-  /* font-size: 16px; */
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
+  text-align: center;
   margin-bottom: 16px;
 }
 .footer-social-icon {
   display: flex;
   gap: 16px;
+
 }
 .footer-icon-elements {
   width: 40px;
@@ -476,24 +488,26 @@ address {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація зміни кольору */
 }
 .footer-social-icons {
-  margin-right: 80px;
+ margin-left: auto;
+ margin-right: auto;
 }
 /*Footer > Subscribe*/
 .footer-subscribe {
-  min-width: 453px;
+  min-width: 288px;
 }
 .modal-form {
   display: flex; /* Вирівнюємо елементи по горизонталі (form) */
 }
 .footer-form {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 16px;
 }
 .footer-input {
   /*Box Model*/
   border: 1px solid var(--white);
   border-radius: 4px;
-  width: 264px;
+  width: 288px;
   height: 40px;
   /*Styles*/
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
