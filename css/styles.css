@@ -791,7 +791,6 @@ address {
 }
 .mob-nav {
   max-width: 200px;
-  margin-bottom: 168px;
 }
 .mob-nav .menu {
   display: flex; /* Відображаємо меню на мобільних пристроях */
@@ -803,7 +802,6 @@ address {
   position: unset;
 }
 .mob-menu .menu .nav-link {
-  
   font-weight: 700;
   font-size: 36px;
   line-height: 111%;
@@ -814,22 +812,25 @@ address {
   display: flex;
   flex-direction: column; /* Вирівнюємо елементи вертикально */
   gap: 24px; /* Відстань між елементами */
-  }
+}
 .menu-contact-info {
-  margin-bottom: 48px; /* Відступ знизу для контактної інформації */
-
+  position: absolute;
+  bottom: 128px; /* Відступ від нижнього краю */
+  left: 16px; /* Відступ від лівого краю */
 }
 
 .menu-contact-info .contact-link {
-font-weight: 500;
-font-size: 20px;
-line-height: 120%;
-letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
 }
 .mob-menu .contacts li:first-child .contact-link {
   color: var(--iris);
 }
 .mob-menu .social-icons {
+  position: absolute;
+  bottom: 40px;
   gap: 40px;
   max-width: 280px;
 }
