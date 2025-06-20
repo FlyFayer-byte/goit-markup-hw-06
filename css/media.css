@@ -96,6 +96,7 @@
    flex-wrap: wrap;
    flex-direction: row;
    gap: unset;
+   padding: 0 108px;
   }
   .footer-line {
     max-width: 264px;
@@ -195,6 +196,7 @@
   .footer .container {
     padding: unset;
     margin: 100px auto;
+    padding: 0 15px;
   }
   .footer-line {
     margin-right: 120px;
