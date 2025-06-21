@@ -182,7 +182,7 @@ address {
 /*----------Hero Image----------*/
 .hero {
   background-color: #2e2f42;
-  padding: 72px 52px;
+  padding: 72px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -190,7 +190,7 @@ address {
     url(../images/Dark-bg-mobile.jpg);
   max-width: 320px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center;;
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
@@ -213,6 +213,8 @@ address {
   color: var(--white);
   max-width: 216px;
   margin-bottom: 72px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .button {
   background: #4d5ae5;
@@ -239,7 +241,7 @@ address {
 }
 /*----------Features----------*/
 .features {
-  padding: 96px 16px;
+  padding: 96px 0;
 }
 
 .benefit {
@@ -261,7 +263,7 @@ address {
 /*----------Our Team----------*/
 .our-team {
   background-color: #f4f4fd;
-  padding: 96px 28px;
+  padding: 96px 0;
 }
 .team-title {
   margin-bottom: 72px;
@@ -322,7 +324,7 @@ address {
 }
 /*----------Our Portfolio----------*/
 .portfolio {
-  padding: 96px 16px;
+  padding: 96px 0;
 }
 .portfolio-title {
   margin-bottom: 72px;
@@ -427,14 +429,13 @@ address {
 .footer {
   display: flex;
   background-color: #2e2f42;
-  padding: 0;
+  padding: 69px 0;
 }
 .footer .container {
   display: flex;
   flex-direction: column;
   align-items: baseline;
   gap: 72px; /* Відстань між елементами */
-  margin: 96px auto; /* Відступи зліва та справа */
   padding: 0 16px;
 }
 .footer-line {
