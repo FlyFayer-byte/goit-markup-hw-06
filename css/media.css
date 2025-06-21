@@ -90,6 +90,9 @@
     width: 356px;
     height: 300px;
   }
+  .benefit-title {
+    text-align: left;
+  }
   /*===== Footer =====*/
   .footer .container {
    flex-wrap: wrap;
@@ -120,6 +123,9 @@
     width: 408px;
     min-height: 584px;
     padding: 72px 24px 24px 24px;
+  }
+  .footer-input {
+    max-width: 264px;
   }
 }
 
@@ -186,13 +192,25 @@
     font-size: 16px;
   }
   .portfolios {
-    padding: 0 15px;
+    /* padding: 0 15px; */
     row-gap: 48px;
   }
   .project-card {
     width: calc((100% - 48px) / 3); /* Дві колонки на планшетах */
     max-width: 360px; /* Максимальна ширина картки проекту */
   }
+  /*------------*/
+  .features {
+    padding: 120px 0;
+  }
+  .portfolio {
+    padding: 120px 0;
+  }
+  .project-image img {
+    width: 360px;
+    height: 300px;
+  }
+  /*------------*/
   .our-team {
     padding: 120px 0;
   }
@@ -225,7 +243,5 @@
   .footer-social-icons {
     margin-right: 80px;
   }
-  .footer-input {
-    max-width: 264px;
-  }
+  
 }

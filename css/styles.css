@@ -532,7 +532,7 @@ address {
   display: flex;
   border-radius: 4px;
   padding: 8px 24px;
-  min-width: 165px;
+  width: 165px;
   height: 40px;
   background: var(--iris);
   font-weight: 500;
@@ -543,6 +543,8 @@ address {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer-social-icon-button {
   margin-left: 16px;
