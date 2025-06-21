@@ -8,14 +8,16 @@
   --white: #fff;
   --font-family: "Roboto", sans-serif;
 }
-/*----------Стилі для body----------*/
+/*===== Global Styles =====*/
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #fff;
   font-size: 16px;
 }
-/* Обнулюємо дефолтні маржини від браузера для заголовків та параграфів тексту */
+
+/*===== RESET =====*/
+
 h1,
 h2,
 h3,
@@ -23,33 +25,35 @@ h4,
 h5,
 h6,
 p {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
+
 button {
-  cursor: pointer; /* Змінюємо курсор на вказівник для кнопок */
+  cursor: pointer;
 }
-/* Обнулюємо дефолтні маржини та лівий падінг для списків */
-ul {
+
+ul,
+ol {
   list-style-type: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
 }
-/* Скидаємо дефолтне підкреслення для посилань */
+
 a {
   text-decoration: none;
   color: inherit;
 }
-/* Зробимо зображення блочними елементами */
+
 img {
   display: block;
-  width: 100%; /* Зображення займає всю ширину контейнера */
-  height: auto; /* Зберігаємо пропорції зображення */
+  max-width: 100%;
+  height: auto;
 }
+
 address {
   font-style: normal; /* Скидаємо курсив для адреси */
 }
+
 /* Візуально приховуємо елементи, але залишаємо їх доступними для читачів екрану */
 /* Це корисно для елементів, які не повинні бути видимими,
    але все ще важливі для доступності, наприклад, для навігації або форм */
@@ -60,28 +64,32 @@ address {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 /*----------Контейнер----------*/
 /* Визначаємо ширину та падінги для контейнера */
 .container {
-  max-width: 320px;
-  width: 100%;
-  margin: 0 auto; /* Центруємо контейнер */
+  max-width: 320px; /* Максимальна ширина контейнера */
+  padding: 0 16px; /* Внутрішні відступи зліва та справа */
+  margin: 0 auto; /* Центруємо контейнер по горизонталі */
 }
 
-/*----------Header----------*/
-.header {
+/*===== Header =====*/
+
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
   box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08), 0 1px 1px rgba(46, 47, 66, 0.16),
     0 1px 6px rgba(46, 47, 66, 0.08);
+  padding: 16px 0; /* Внутрішні відступи зверху та знизу */
 }
 .header-container {
   display: flex;
-  padding: 16px; /* Внутрішні відступи контейнера */
+  align-items: center; /* Центруємо контент по вертикалі */
+  justify-content: space-between; /* Розміщуємо елементи по краях */
 }
 .nav {
   display: flex;
@@ -113,8 +121,7 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 24px 0;
   display: block;
 }
 /* Застосувати стиль до першого <li> і його .nav-link */
@@ -163,14 +170,13 @@ address {
 }
 
 .menu-open-button {
-  margin-left: auto;
   border: none;
   background-color: transparent; /* Прозорий фон для кнопки */
   padding: 0;
 }
-/*Top line bg*/
-.header {
-  border-bottom: 1px solid #e7e9fc;
+.menu-open-button-icon {
+  display: block;
+  fill: #2f2f37;
 }
 
 /*----------Hero Image----------*/
@@ -760,22 +766,43 @@ address {
   border-radius: 4px;
 }
 /*===== Mobile menu =====*/
-.mob-menu {
-  width: 100%;
-  max-width: 320px; /* Максимальна ширина мобільного меню */
-  height: 100%;
-  background-color: var(--white);
+.mob-menu-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10; /* Забезпечуємо, що мобільне меню завжди поверх інших елементів */
-  flex-direction: column;
-  padding: 24px 24px 40px 16px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+
   opacity: 0; /* Початковий стан - невидимий */
   pointer-events: none; /* Забороняємо взаємодію з елементами поза мобільним меню */
   visibility: hidden; /* Забороняємо видимість поза мобільним меню */
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація появи */
+    z-index: 9999; /* Забезпечуємо, що мобільне меню завжди поверх інших елементів */
 }
+
+.mob-menu-overlay.is-open {
+  opacity: 1; /* Змінюємо на видимий стан */
+  pointer-events: auto; /* Дозволяємо взаємодію з елементами мобільного меню */
+  visibility: visible; /* Дозволяємо видимість мобільного меню */
+}
+
+.mobile-menu-container {
+  position: relative; /* Відносне позиціонування для контейнера мобільного меню */
+padding-top: 72px;
+padding-bottom: 40px;
+
+display: flex;
+flex-direction: column;
+height: 100%;
+}
+
 .menu-close-button {
+  position: absolute; /* Абсолютне позиціонування для кнопки закриття */
+  top: 24px; /* Відступ зверху */
+  right: 24px; /* Відступ справа */
   width: 24px;
   height: 24px;
   margin-left: auto; /* Вирівнюємо кнопку по правому краю */
@@ -791,43 +818,37 @@ address {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація зміни кольору */
   z-index: 10; /* Забезпечуємо, що кнопка завжди поверх інших елементів */
   content: ""; /* Порожній контент для псевдоелемента */
-  margin-bottom: 24px;
 }
-.mob-menu-list {
-  display: flex;
-  flex-direction: column; /* Вирівнюємо елементи вертикально */
-  gap: 40px; /* Відстань між елементами */
-}
+
 .mob-nav {
-  max-width: 151px;
+  margin-bottom: auto;
 }
+
 .mob-nav .menu {
   display: flex; /* Відображаємо меню на мобільних пристроях */
   flex-direction: column; /* Вирівнюємо елементи вертикально */
   gap: 40px; /* Відстань між елементами */
-  margin-left: unset;
 }
-.mob-menu .menu li:first-child .menu-nav-link {
+.mob-nav .menu li:first-child .menu-nav-link {
   position: unset;
   color: var(--iris);
 }
-.mob-menu .menu .menu-nav-link {
+.mob-nav .menu .menu-nav-link {
   font-weight: 700;
   font-size: 36px;
   line-height: 111%;
   letter-spacing: 0.02em;
   padding: 0;
 }
+.menu-contact-info {
+  margin-bottom: 48px;
+}
 .menu-contact-info .contacts {
   display: flex;
   flex-direction: column; /* Вирівнюємо елементи вертикально */
   gap: 24px; /* Відстань між елементами */
 }
-.menu-contact-info {
-  position: absolute;
-  bottom: 128px; /* Відступ від нижнього краю */
-  left: 16px; /* Відступ від лівого краю */
-}
+
 
 .menu-contact-info .contact-link {
   font-weight: 500;
@@ -835,15 +856,24 @@ address {
   line-height: 120%;
   letter-spacing: 0.02em;
 }
-.mob-menu .contacts li:first-child .contact-link {
+.mobile-menu-container .contacts li:first-child .contact-link {
   color: var(--iris);
 }
-.mob-menu .social-icons {
-  position: absolute;
-  bottom: 40px;
+
+.mobile-menu-container .social-icons {
   gap: 40px;
-  max-width: 280px;
+  justify-content: left;
 }
+
+@media screen and (min-width: 768px) {
+  .mob-menu-overlay {
+    display: none; /* Сховати мобільне меню на екранах ширше 768px */
+  }
+}
+
+
+
+
 .is-open {
   opacity: 1; /* Змінюємо на видимий стан */
   pointer-events: auto; /* Дозволяємо взаємодію з елементами модального вікна */
